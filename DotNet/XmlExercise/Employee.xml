@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<employees>
+  <employee>
+    <name>Tandy</name>
+    <age>28</age>
+    <designation>SSE</designation>
+    <address>
+      <Street>2</Street>
+      <city>chennai</city>
+    </address>
+  </employee>
+  <employee>
+    <name>Sandy</name>
+    <age>29</age>
+    <designation>SSE</designation>
+    <address>
+      <Street>10</Street>
+      <city>Kolkatta</city>
+    </address>
+    <qualification>
+      <UG>BE ECE</UG>
+    </qualification>
+  </employee>
+</employees>

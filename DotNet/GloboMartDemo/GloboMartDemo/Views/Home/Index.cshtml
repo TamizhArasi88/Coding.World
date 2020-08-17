@@ -1,0 +1,17 @@
+﻿@model GloboMartDemo.ProductCatalogueViewModel
+@{
+    ViewBag.Title = ViewBag.Message;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Welcome to Globo Mart Product Catalogue</h2>
+<div>
+    @Html.Partial("~/Views/Home/Products.cshtml", this.Model.Products)
+</div>
+<div class="form-inline">
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Search", "Search", "Home", new { @class = "btn btn-default" })       
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@model GloboMart.Entities.ProductPricing
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Search Product pricing </h2>
+@using (Html.BeginForm("PriceDetails", "Pricing", new { ProductPricing = Model }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.Label("Enter product ID : ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductID, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-inline">
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button type="submit" id="btnPrice" name="btnPrice" value="Get Details" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+<div>
+    @Html.Partial("~/Views/Pricing/_PriceDetails.cshtml", this.Model)
+</div>

@@ -1,0 +1,19 @@
+﻿using GloboMart.Entities;
+using GloboMart.Interface;
+using GloboMart.ProductRepository;
+using Ninject.Modules;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace GloboMart.PricingService
+{
+    public class NinjectCore : NinjectModule
+    {
+        public override void Load()
+        {
+            Bind<IRepository<ProductPricing>>().To<PricingRepository>();
+        }
+    }
+}

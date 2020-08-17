@@ -1,0 +1,27 @@
+﻿@model GloboMart.Entities.ProductPricing
+
+<div>
+    <h4>ProductPricing</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index", "Home")
+</p>
